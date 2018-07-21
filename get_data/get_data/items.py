@@ -8,7 +8,19 @@
 import scrapy
 
 
-class GetDataItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class CarItem(scrapy.Item):
+    id           = scrapy.Field()
+    color        = scrapy.Field()
+    fuel         = scrapy.Field()
+    mileage      = scrapy.Field()
+    brand        = scrapy.Field()
+    model        = scrapy.Field()
+    onlyOwner    = scrapy.Field()
+    year         = scrapy.Field()
+    steering     = scrapy.Field()
+    engine       = scrapy.Field()
+    traction     = scrapy.Field()
+    transmission = scrapy.Field()
+    location     = scrapy.Field()
+    image_urls   = scrapy.Field()
+    images       = scrapy.Field()

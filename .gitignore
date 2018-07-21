@@ -1,0 +1,3 @@
+get_data/images/
+get_data/crawl_data.csv
+**/__pycache__/
