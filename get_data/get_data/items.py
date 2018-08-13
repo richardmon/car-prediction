@@ -24,3 +24,4 @@ class CarItem(scrapy.Item):
     location     = scrapy.Field()
     image_urls   = scrapy.Field()
     images       = scrapy.Field()
+    price        = scrapy.Field()

@@ -36,5 +36,6 @@ class CarsSpider(scrapy.Spider):
         carItem['traction']     = response.xpath('//*[text()[contains(., "Tracción")]]/../span/text()').extract_first()
         carItem['transmission'] = response.xpath('//*[text()[contains(., "Transmisión")]]/../span/text()').extract_first()
         carItem['location']     = response.xpath('//*[@class="location-info"]/text()').extract()[1].strip()
-        karItem['image_urls']   = response.xpath('//figure[1]/a/img/@src').extract()
+        carItem['image_urls']   = response.xpath('//figure[1]/a/img/@src').extract()
+        carItem['price']        = response.xpath('//*[@class="price-tag price-tag-motors"]/span[2]/text()').extract_first()
         yield carItem
