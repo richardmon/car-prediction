@@ -1,3 +1,9 @@
+scrapy
 pandas
 matplotlib
 fuzzywuzzy[speedup]
+jupyter
+pillow
+unidecode
+seaborn
+sklearn
