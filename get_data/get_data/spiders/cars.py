@@ -14,11 +14,9 @@ class CarsSpider(scrapy.Spider):
         for item in items:
             #Iterates over each result
             link = item.xpath('.//*[@class="images-viewer"]/@item-url').extract_first()
-            print(link)
             yield scrapy.Request(link, callback=self.parse_items)
-        next_page = response.xpath('//*[@class="pagination__next"]/a/@href').extract_first()
+        next_page = response.xpath('//*[text()[contains(., "Siguiente")]]/../@href').extract_first()
         if next_page:
-            print(next_page)
             yield scrapy.Request(next_page)
 
     def parse_items(self, response):
